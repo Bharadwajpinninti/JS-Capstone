@@ -1,4 +1,4 @@
-# My First JS Capston Project
+# JS Capston Project
 
 ## Features
 
