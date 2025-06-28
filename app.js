@@ -30,6 +30,12 @@ function renderHeader() {
     }
 
     // implement logout
+    logoutButton.addEventListener('click', () => {
+        currentUser = null;
+        localStorage.removeItem('user');
+        window.location.hash = 'login';
+    });
+
 }
 
 
