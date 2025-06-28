@@ -15,6 +15,7 @@ body {
   color: #222;
 }
 
+
 header {
   height: var(--header-height);
   background: var(--primary-color);
@@ -26,6 +27,7 @@ header {
   box-shadow: var(--box-shadow);
 }
 
+/* Desktop Nav CSS Starts Here */
 nav {
   display: flex;
   gap: 1.5rem;
@@ -54,9 +56,12 @@ nav a:active {
 }
 
 button {
-    font-family: inherit;
-  }
+  font-family: inherit;
+}
 
+/* Desktop Nav CSS Ends Here */
+
+/* Mobile Nav CSS Starts Here */
 .hamburger {
   display: none;
   background: none;
@@ -114,7 +119,10 @@ button {
   font-weight: bold;
   text-decoration: underline;
 }
+/* Mobile CSS Ends Here */
 
+/* Media Query for Nav Bar */
+/* Below CSS Only Applied if Screen Width is <= 800px */
 @media (max-width: 800px) {
   header {
     flex-direction: column;
@@ -140,112 +148,116 @@ button {
   }
 }
 
+/* Media Query for Nav Bar Ends Here */
 
+/* Desktop Logout Button CSS */
 #logout-btn {
-    background: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1.2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-left: 1rem;
-    transition: background 0.2s;
-  }
-  #logout-btn:hover {
-    background: #b91c1c;
-  }
-  
-  /* Logout button (mobile) */
-  .mobile-user-info button {
-    background: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1.2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .mobile-user-info button:hover {
-    background: #b91c1c;
-  }
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.2s;
+}
+#logout-btn:hover {
+  background: #b91c1c;
+}
+/* Desktop Logout Button CSS Ends Here */
+
+/* Mobile Logout Button CSS */
+.mobile-user-info button {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.mobile-user-info button:hover {
+  background: #b91c1c;
+}
+/* Mobile Logout Button CSS Ends Here */
+
+/* ---------------------------------------------------------------------------- */
 
 
-/* --------------------------------------------------------------------- */
+/* Main CSS Starts Here */
 
+/* CSS for Login and Signup */
+.page-section {
+  display: block;  /* chanage to none */
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+
+.page-section.active {
+  display: block;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 350px;
+  margin: 2rem auto 0 auto;
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+.auth-form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.auth-form button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.auth-form button:hover {
+  background: #4f46e5;
+}
+.auth-form p {
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: center;
+}
+.auth-error {
+  color: #dc3545;
+  font-size: 0.95rem;
+  min-height: 1.2em;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.2rem;
+  }
   .page-section {
-    display: none;  /* set it to none */
-    max-width: 800px;
-    margin: 2rem auto;
-    background: var(--surface-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: 2rem;
+    padding: 1rem;
   }
-  
-  .page-section.active {
-    display: block;
-  }
-
-
   .auth-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 350px;
-    margin: 2rem auto 0 auto;
-    background: var(--surface-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: 2rem;
+    padding: 1rem;
+    max-width: 100%;
   }
-  .auth-form input {
-    padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  .auth-form button {
-    background: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .auth-form button:hover {
-    background: #4f46e5;
-  }
-  .auth-form p {
-    margin: 0;
-    font-size: 0.95rem;
-    text-align: center;
-  }
-  .auth-error {
-    color: #dc3545;
-    font-size: 0.95rem;
-    min-height: 1.2em;
-    text-align: center;
-  }
-
-  
-  @media (max-width: 600px) {
-    .logo {
-      font-size: 1.2rem;
-    }
-    .page-section {
-      padding: 1rem;
-    }
-    .auth-form {
-      padding: 1rem;
-      max-width: 100%;
-    }
-
-
-  }
+}
+/* CSS for Login and Signup Ends Here */
