@@ -1,5 +1,33 @@
 {
-    "users": [],
-    "tasks": [],
-    "notes":[]
+  "users": [
+    {
+      "id": "5b35",
+      "userName": "Bharadwaj",
+      "email": "pinnintibharadwaj99@gmail.com",
+      "password": "123"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "94cf",
+      "title": "Failure",
+      "description": "Im a failure person",
+      "priority": "high",
+      "color": "red",
+      "userId": "5b35",
+      "completed": false,
+      "createdAt": "2025-07-03T05:19:54.344Z"
+    },
+    {
+      "id": "6dd4",
+      "title": "Success",
+      "description": "I will ne successd",
+      "priority": "high",
+      "color": "green",
+      "userId": "5b35",
+      "completed": false,
+      "createdAt": "2025-07-03T05:20:49.035Z"
+    }
+  ],
+  "notes": []
 }
